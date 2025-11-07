@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: eth-options-monitor
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: RECIPIENT_EMAIL
+        sync: false
+      - key: EMAILJS_SERVICE_ID
+        value: service_g0p8jnc
+      - key: EMAILJS_TEMPLATE_ID
+        value: template_302zrin
+      - key: EMAILJS_PUBLIC_KEY
+        value: wfUfQrJOkeANjVkDc
+      - key: CHECK_INTERVAL_MINUTES
+        value: 5
+      - key: ALERT_COOLDOWN_HOURS
+        value: 6

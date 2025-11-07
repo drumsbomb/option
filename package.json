@@ -1,0 +1,31 @@
+{
+  "name": "eth-options-monitor-backend",
+  "version": "2.0.0",
+  "description": "24/7 ETH Options Monitoring with ML-Optimized Detection",
+  "main": "src/serverAdvanced.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/serverAdvanced.js",
+    "start:basic": "node src/server.js",
+    "dev": "node --watch src/serverAdvanced.js",
+    "backtest": "node -e \"import('./src/backtestRunner.js').then(m => m.runBacktestingAnalysis())\""
+  },
+  "keywords": [
+    "ethereum",
+    "options",
+    "monitoring",
+    "deribit",
+    "alerts",
+    "machine-learning",
+    "backtesting"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5"
+  }
+}
